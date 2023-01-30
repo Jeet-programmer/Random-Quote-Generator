@@ -5,6 +5,7 @@ soundBtn = document.querySelector(".sound");
 copyBtn = document.querySelector(".copy");
 twitterBtn = document.querySelector(".twitter");
 
+quoteBtn.innerText = "Loading Quote...";
 fetch("https://api.quotable.io/random").then(res => res.json()).then(result =>{
         quoteText.innerText = result.content;
         auth.innerText = result.author;
