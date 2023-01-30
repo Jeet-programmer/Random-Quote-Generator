@@ -5,6 +5,12 @@ soundBtn = document.querySelector(".sound");
 copyBtn = document.querySelector(".copy");
 twitterBtn = document.querySelector(".twitter");
 
+fetch("https://api.quotable.io/random").then(res => res.json()).then(result =>{
+        quoteText.innerText = result.content;
+        auth.innerText = result.author;
+        quoteBtn.innerText = "New Quote";
+    });
+
 
 // random quote function
 function randomQuote(){
